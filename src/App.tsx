@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import { ContainerTodoList } from './components/containerTodoList';
+import { TodosContextProvider } from './components/context/todosContext';
+import { Footer } from './components/footer';
+import { Header } from './components/header';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className='grid grid-rows-layout items-baseline w-full min-h-screen sm:max-w-[42rem] pt-8 pb-6 px-6 m-auto'>
+      <Header />
+
+      <main className='max-w-[38rem] w-full mx-auto p-4'>
+        <h1 className='font-bold text-5xl mb-4'>Todo List.</h1>
+        <TodosContextProvider>
+          <ContainerTodoList />
+        </TodosContextProvider>
+      </main>
+
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
