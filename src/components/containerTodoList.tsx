@@ -32,7 +32,6 @@ export const ContainerTodoList = () => {
         {Object.keys(doneTodos).length != 0 && (
           <ContainerTodoSection title={'Completed'}>
             {doneTodos.map(([key, value]) => {
-              console.log(key, value);
               return <ContainerTodoItem key={key} todo={value} listKey={key} />;
             })}
           </ContainerTodoSection>
