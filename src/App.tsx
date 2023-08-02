@@ -1,4 +1,3 @@
-import './App.css';
 import { ContainerTodoList } from './components/containerTodoList';
 import { TodosContextProvider } from './components/context/todosContext';
 import { Footer } from './components/footer';
