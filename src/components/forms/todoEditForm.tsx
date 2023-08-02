@@ -35,8 +35,8 @@ export const TodoEditForm = ({ listKey, todo, onClick }: TodoEditFormProps) => {
           key='Edit task'
           onClick={(e) => {
             e.preventDefault();
+            onClick();
             editTodo(listKey, text);
-            onClick;
           }}
         >
           <SendIcon />
