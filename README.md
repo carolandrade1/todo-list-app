@@ -4,7 +4,7 @@
 
 Todo List. is a simple web application to save your daily tasks in order not to miss anything.
 
-# Technologies use
+# 💻 Technologies
 
 - HTML
 - TAILWINDCSS
