@@ -18,7 +18,7 @@ export const ContainerTodoList = () => {
       {Object.entries(todos).length === 0 && <p>No task to show....</p>}
 
       <div className='flex flex-col m-auto max-w-[30rem] w-full'>
-        {Object.keys(notDoneTodo).length != 0 && (
+        {notDoneTodo.length != 0 && (
           <ContainerTodoSection title={'Ongoing'}>
             {notDoneTodo.map(([key, value]) => {
               return <ContainerTodoItem key={key} todo={value} listKey={key} />;
@@ -26,7 +26,7 @@ export const ContainerTodoList = () => {
           </ContainerTodoSection>
         )}
 
-        {Object.keys(doneTodos).length != 0 && (
+        {doneTodos.length != 0 && (
           <ContainerTodoSection title={'Completed'}>
             {doneTodos.map(([key, value]) => {
               return <ContainerTodoItem key={key} todo={value} listKey={key} />;
