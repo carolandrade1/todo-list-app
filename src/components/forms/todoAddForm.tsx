@@ -26,8 +26,8 @@ export const TodoAddForm = () => {
       >
         Write new todo.
       </label>
-      <p className={`${error ? 'opacity-1' : 'opacity-0'}`}>
-        At least one character
+      <p className={`text-red-600 ${error ? 'opacity-1' : 'opacity-0'}`}>
+        Write at least one character
       </p>
       <div className='group relative'>
         <input
@@ -35,7 +35,12 @@ export const TodoAddForm = () => {
           type='text'
           id='newTodo'
           placeholder='Write new todo...'
-          className='block w-full p-3 sm:p-4 pl-6 pr-11 placeholder:text-gray-500 text-base bg-[#FBFBFB] shadow-lg border hover:border hover:border-gray-400 customTransition rounded-[20px] focus:outline-none focus:ring-2 focus:ring-gray-900'
+          className={`block w-full p-3 sm:p-4 pl-6 pr-11 placeholder:text-gray-500 text-base bg-[#FBFBFB] shadow-lg border-2 customTransition rounded-[20px] focus:outline-none focus:ring-2 
+          ${
+            error
+              ? 'border-red-600 border-2 focus:ring-red-600 hover:border-red-600'
+              : 'border-transparent focus:ring-gray-900 hover:border-gray-900'
+          }`}
           onChange={(e) => setNewText(e.target.value)}
           required
         />
