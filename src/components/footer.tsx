@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <footer className='flex justify-between border-t-[1px] border-gray-300 w-full'>
-      <div className='flex items-center text-gray-700 md:text-base gap-1'>
+      <div className='flex items-center md:text-base gap-1'>
         <span className='text-sm'> ©{new Date().getFullYear()} | </span>
         <a
           href='https://github.com/carolandrade1'
@@ -21,7 +21,7 @@ export const Footer = () => {
           rel='noopener noreferrer'
           aria-label='Source code of this project'
           title='Source code of this project'
-          className='flex justify-between gap-1 items-center p-1 rounded-lg text-gray-700 text-sm'
+          className='flex justify-between gap-1 items-center p-1 rounded-lg text-sm'
         >
           Source
         </a>

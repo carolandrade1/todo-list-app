@@ -15,7 +15,9 @@ export const ContainerTodoList = () => {
   return (
     <>
       <TodoAddForm />
-      {Object.entries(todos).length === 0 && <p>No task to show....</p>}
+      {Object.entries(todos).length === 0 && (
+        <p className='text-center'>No task to show....</p>
+      )}
 
       <div className='flex flex-col m-auto max-w-[30rem] w-full'>
         {notDoneTodo.length != 0 && (
